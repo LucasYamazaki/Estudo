@@ -1,4 +1,4 @@
-palavra = 'perfume'
+palavra = 'forca'
 digitadas = []
 chances = 5
 while True:
