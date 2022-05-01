@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafics</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body{
+            background-color: #E6E6FA;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="f-group">
+            <label for="">Categoria</label>
+            <select name="slct1" id="slct1" onchange="populate(this.id,'slct2')">
+                <option value="">---Selecione---</option>
+                <option value="comida">Comida</option>
+                <option value="brinquedo">Brinquedo</option>
+                <option value="celulares">Celulares</option>
+            </select>
+        </div>
+
+        <div class="f-group">
+            <label for="">Produto</label>
+            <select name="slct2" id="slct2">
+                
+            </select>
+        </div>
+
+    </div>
+
+    <script>
+        function populate(s1, s2)
+        {
+            var s1 = document.getElementById(s1);
+            var s2 = document.getElementById(s2);
+
+            s2.innerHTML = "";
+
+            if(s1.value == "comida")
+            {
+                var optionArray = ['macarrao|Macarrão','sushi|Sushi','laranja|Laranja'];
+            }
+
+        }
+
+    </script>
+
+
+
+
+</body>
+</html>
