@@ -1,9 +1,13 @@
-import gtts
-from playsound import playsound
+import pyttsx3
+engine = pyttsx3.init()
 
-with open('falas.txt', 'r') as arquivo:
-    for linha in arquivo:
-        frase = gtts.gTTS(linha, lang='pt-BR')
-        frase.save('frase.mp3')
-        playsound('frase.mp3')
+voices = engine.getProperty('voices')
+engine.setProperty('voices', voices[-2].id)
 
+engine.say('estudar\n')
+engine.runAndWait()
+
+
+
+for valor in atividades:
+    arquivo.write(str(valor))
