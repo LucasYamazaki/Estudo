@@ -1,8 +1,10 @@
 import speech_recognition as sr
 
 rec = sr.Recognizer()
-
+mercado = []
 atividades = []
+casa = []
+editar = []
 
 #Setando a lista 'atividades' com o arquivo txt.
 with open('tarefas.txt','r') as arquivo:
@@ -44,6 +46,7 @@ print("---Menu---")
 print("1-Ver tarefas")
 print("2-Adicionar tarefa")
 print("3-Remover tarefa")
+print("4-Editar tarefa")
 while True:
     with sr.Microphone() as mic:
         rec.adjust_for_ambient_noise(mic)
